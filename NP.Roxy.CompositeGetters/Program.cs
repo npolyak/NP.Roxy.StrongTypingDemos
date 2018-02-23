@@ -24,12 +24,6 @@ using System.Threading.Tasks;
 
 namespace NP.Roxy.CompositeGetters
 {
-    public interface IMyDataImplWrapper
-    {
-        MyDataImplementorClass DataImplementor { get; }
-    }
-
-
     class Program
     {
         static void Main(string[] args)
