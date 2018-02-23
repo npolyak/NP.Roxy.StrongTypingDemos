@@ -28,7 +28,6 @@ namespace NP.Roxy.CompositeGetters
     {
         static void Main(string[] args)
         {
-            #region Prop Getter 
             // ITypeConfig is an interface 
             // that can be configured to generate the code
             // for a specific type. 
@@ -68,8 +67,8 @@ namespace NP.Roxy.CompositeGetters
             // Print FullName
             Console.WriteLine(myData.FullName);
 
-            #endregion Prop Getter 
-
+            // save the Roxy generated project under GeneratedCode folder (within the 
+            // directory that contains the executable)
             Core.Save("GeneratedCode");
         }
     }
