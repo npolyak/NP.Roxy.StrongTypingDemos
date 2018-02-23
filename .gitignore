@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NP.Roxy.CompositeGetters/.vs/NP.Roxy.CompositeGetters/v15
+/NP.Roxy.CompositeGetters/bin/Debug
+/NP.Roxy.CompositeGetters/obj/Debug
+/NP.Roxy.CompositeGetters/packages
