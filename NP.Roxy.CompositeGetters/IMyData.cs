@@ -12,8 +12,7 @@ namespace NP.Roxy.CompositeGetters
 
         string FirstName { get; set; }
 
-        int Age { get; set; }
-
+        // we create FullName using a lambda expression
         string FullName { get; }
     }
 }

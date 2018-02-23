@@ -29,22 +29,43 @@ namespace NP.Roxy.CompositeGetters
         static void Main(string[] args)
         {
             #region Prop Getter 
+            // ITypeConfig is an interface 
+            // that can be configured to generate the code
+            // for a specific type. 
+            // The Template Argument IMyData specifies
+            // the interface to implement.
+            // SecondArgument NoInterface means
+            // that there are no wrapper objects.
             ITypeConfig typeConfig =
                 Core.FindOrCreateTypeConfig<IMyData, NoInterface>();
 
+            // set up the lambda expression for IMyData.FullName Property
+            // implementation
             typeConfig.SetPropGetter<IMyData, string>
             (
+                // this expression specified the name
+                // of the property to implement
                 (data) => data.FullName,
+
+                // this is the property implementation expression:
+                // Full
                 (data) => data.LastName + ", " + data.FirstName
             );
 
+            // specify that the type configuration is completed
             typeConfig.ConfigurationCompleted();
 
+            // Get an instance of IMyData generated implementation
+            // type. 
             IMyData myData = Core.GetInstanceOfGeneratedType<IMyData>();
 
+            // set FirstName
             myData.FirstName = "Joe";
+
+            // set LastName
             myData.LastName = "Doe";
 
+            // Print FullName
             Console.WriteLine(myData.FullName);
 
             #endregion Prop Getter 
