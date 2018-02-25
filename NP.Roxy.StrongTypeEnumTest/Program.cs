@@ -43,6 +43,8 @@ namespace NP.Roxy.StrongTypeEnumTest
             // write <DisplayName>: <Description>
             Console.WriteLine($"{product.DisplayName}: {product.Description}");
 
+            // save the Roxy generated project under GeneratedCode folder (within the 
+            // directory that contains the executable)
             Core.Save("GeneratedCode");
         }
     }
